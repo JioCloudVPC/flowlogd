@@ -91,7 +91,7 @@ def get_log_in_time(start_time,end_time,directory,file_name,account_id,dirn,vn):
 	LOG.info('query logs for start_time: %s end_time: %s direction: %s' % (temp1,temp,dirn))
         if write_log_to_file(convert_to_now(temp1.strftime(constants.DATETIME_FORMAT)),
                         convert_to_now(temp.strftime(constants.DATETIME_FORMAT)),
-                        directory,file_name,account_id,0,vn,logs):
+                        directory,file_name,account_id,dirn,vn,logs):
             if total_seconds > 1:
                 with open(directory+'/'+file_name, 'a') as outfile:
                     outfile.write(',')
